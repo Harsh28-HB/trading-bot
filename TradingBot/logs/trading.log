@@ -1,0 +1,116 @@
+2026-07-02 22:50:16 INFO Sending MARKET BUY BTCUSDT Qty=0.001
+2026-07-02 22:50:17 ERROR Binance API exception: APIError(code=-2014): API-key format invalid.
+2026-07-02 22:50:17 ERROR Order execution failed
+Traceback (most recent call last):
+  File "C:\Users\harsh\OneDrive\Desktop\TRADING BOT\TradingBot\bot\orders.py", line 50, in place_market_order
+    response = client.futures_create_order(
+        symbol=symbol,
+    ...<2 lines>...
+        quantity=quantity,
+    )
+  File "C:\Users\harsh\OneDrive\Desktop\TRADING BOT\venv\Lib\site-packages\binance\client.py", line 7948, in futures_create_order
+    return self._request_futures_api("post", "order", True, data=params)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\harsh\OneDrive\Desktop\TRADING BOT\venv\Lib\site-packages\binance\client.py", line 148, in _request_futures_api
+    return self._request(method, uri, signed, force_params, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\harsh\OneDrive\Desktop\TRADING BOT\venv\Lib\site-packages\binance\client.py", line 111, in _request
+    return self._handle_response(self.response)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\harsh\OneDrive\Desktop\TRADING BOT\venv\Lib\site-packages\binance\client.py", line 120, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-2014): API-key format invalid.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\harsh\OneDrive\Desktop\TRADING BOT\TradingBot\cli.py", line 87, in main
+    result = place_market_order(args.symbol, args.side, args.quantity)
+  File "C:\Users\harsh\OneDrive\Desktop\TRADING BOT\TradingBot\bot\orders.py", line 59, in place_market_order
+    _raise_logged_error(exc)
+    ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\harsh\OneDrive\Desktop\TRADING BOT\TradingBot\bot\orders.py", line 30, in _raise_logged_error
+    raise RuntimeError("Trading operation failed") from exc
+RuntimeError: Trading operation failed
+2026-07-02 22:50:25 INFO Sending MARKET SELL BTCUSDT Qty=0.001
+2026-07-02 22:50:26 ERROR Binance API exception: APIError(code=-2014): API-key format invalid.
+2026-07-02 22:50:26 ERROR Order execution failed
+Traceback (most recent call last):
+  File "C:\Users\harsh\OneDrive\Desktop\TRADING BOT\TradingBot\bot\orders.py", line 50, in place_market_order
+    response = client.futures_create_order(
+        symbol=symbol,
+    ...<2 lines>...
+        quantity=quantity,
+    )
+  File "C:\Users\harsh\OneDrive\Desktop\TRADING BOT\venv\Lib\site-packages\binance\client.py", line 7948, in futures_create_order
+    return self._request_futures_api("post", "order", True, data=params)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\harsh\OneDrive\Desktop\TRADING BOT\venv\Lib\site-packages\binance\client.py", line 148, in _request_futures_api
+    return self._request(method, uri, signed, force_params, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\harsh\OneDrive\Desktop\TRADING BOT\venv\Lib\site-packages\binance\client.py", line 111, in _request
+    return self._handle_response(self.response)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\harsh\OneDrive\Desktop\TRADING BOT\venv\Lib\site-packages\binance\client.py", line 120, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-2014): API-key format invalid.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\harsh\OneDrive\Desktop\TRADING BOT\TradingBot\cli.py", line 87, in main
+    result = place_market_order(args.symbol, args.side, args.quantity)
+  File "C:\Users\harsh\OneDrive\Desktop\TRADING BOT\TradingBot\bot\orders.py", line 59, in place_market_order
+    _raise_logged_error(exc)
+    ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\harsh\OneDrive\Desktop\TRADING BOT\TradingBot\bot\orders.py", line 30, in _raise_logged_error
+    raise RuntimeError("Trading operation failed") from exc
+RuntimeError: Trading operation failed
+2026-07-02 22:50:48 INFO Sending LIMIT BUY BTCUSDT Qty=0.001 Price=95000.0
+2026-07-02 22:50:49 ERROR Binance API exception: APIError(code=-2014): API-key format invalid.
+2026-07-02 22:50:49 ERROR Order execution failed
+Traceback (most recent call last):
+  File "C:\Users\harsh\OneDrive\Desktop\TRADING BOT\TradingBot\bot\orders.py", line 82, in place_limit_order
+    response = client.futures_create_order(
+        symbol=symbol,
+    ...<4 lines>...
+        price=price,
+    )
+  File "C:\Users\harsh\OneDrive\Desktop\TRADING BOT\venv\Lib\site-packages\binance\client.py", line 7948, in futures_create_order
+    return self._request_futures_api("post", "order", True, data=params)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\harsh\OneDrive\Desktop\TRADING BOT\venv\Lib\site-packages\binance\client.py", line 148, in _request_futures_api
+    return self._request(method, uri, signed, force_params, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\harsh\OneDrive\Desktop\TRADING BOT\venv\Lib\site-packages\binance\client.py", line 111, in _request
+    return self._handle_response(self.response)
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\harsh\OneDrive\Desktop\TRADING BOT\venv\Lib\site-packages\binance\client.py", line 120, in _handle_response
+    raise BinanceAPIException(response, response.status_code, response.text)
+binance.exceptions.BinanceAPIException: APIError(code=-2014): API-key format invalid.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\harsh\OneDrive\Desktop\TRADING BOT\TradingBot\cli.py", line 89, in main
+    result = place_limit_order(args.symbol, args.side, args.quantity, args.price)
+  File "C:\Users\harsh\OneDrive\Desktop\TRADING BOT\TradingBot\bot\orders.py", line 93, in place_limit_order
+    _raise_logged_error(exc)
+    ~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\harsh\OneDrive\Desktop\TRADING BOT\TradingBot\bot\orders.py", line 30, in _raise_logged_error
+    raise RuntimeError("Trading operation failed") from exc
+RuntimeError: Trading operation failed
+2026-07-02 22:50:56 ERROR Order execution failed
+Traceback (most recent call last):
+  File "C:\Users\harsh\OneDrive\Desktop\TRADING BOT\TradingBot\cli.py", line 87, in main
+    result = place_market_order(args.symbol, args.side, args.quantity)
+  File "C:\Users\harsh\OneDrive\Desktop\TRADING BOT\TradingBot\bot\orders.py", line 36, in place_market_order
+    raise ValueError("Invalid symbol. Must end with USDT.")
+ValueError: Invalid symbol. Must end with USDT.
+2026-07-02 22:51:17 ERROR Order execution failed
+Traceback (most recent call last):
+  File "C:\Users\harsh\OneDrive\Desktop\TRADING BOT\TradingBot\cli.py", line 87, in main
+    result = place_market_order(args.symbol, args.side, args.quantity)
+  File "C:\Users\harsh\OneDrive\Desktop\TRADING BOT\TradingBot\bot\orders.py", line 40, in place_market_order
+    raise ValueError("Invalid quantity. Must be greater than zero.")
+ValueError: Invalid quantity. Must be greater than zero.
